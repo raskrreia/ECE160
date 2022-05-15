@@ -6,4 +6,8 @@
 
 </p>
 <p align="center">
- <img src="https://forthebadge.com/images/badges/built-with-love.svg"> <img src="https://forthebadge.com/images/badges/made-with-python.svg"> <img src="https://forthebadge.com/images/badges/open-source.svg"> <img src="https://forthebadge.com/images/badges/made-with-reason.svg">
+ <img src="https://forthebadge.com/generator/?plabel=Made+by&slabel=Mia+Abbygale%2C+Normina+%26+Jude+cyril">
+
+</p>
+<p align="center">
+ <img src="https://forthebadge.com/images/badges/made-with-python.svg"> <img src="https://forthebadge.com/images/badges/made-with-python.svg"> <img src="https://forthebadge.com/images/badges/open-source.svg"> <img src="https://forthebadge.com/images/badges/made-with-reason.svg">
