@@ -12,7 +12,7 @@ receiver_id = 1810976786 # https://api.telegram.org/botTOKEN/getUpdates
 Conf_threshold = 0.5
 NMS_threshold = 0.7
 
-COLORS = [(0,0,255),(255,0,255)]
+COLORS = [(0,255,255),(0,0,255)]
 """
     Color Code:
         Red = 0,0,255 #No Helmet
@@ -40,7 +40,7 @@ net.setPreferableTarget(cv.dnn.DNN_TARGET_CUDA_FP16)
 model = cv.dnn_DetectionModel(net)
 #   Set Parameters
 model.setInputParams(size=(416,416), scale = 1/255, swapRB=True)
-media_source = 'helmet.mp4' #0 for main, 1 = secondary cam,... ('filename.mp4') for videos
+media_source = 'helmesttt.mp4' #0 for main, 1 = secondary cam,... ('filename.mp4') for videos
 
 #   Source Feed: Webcam
 cap = cv.VideoCapture(media_source)
@@ -71,8 +71,6 @@ while True:
 #   Save picture with No mask
     
         if classid== 1:
-#        cv.putText(frame,'WEAR MASK!', (box[0], box[1]-30), 
- #                      cv.FONT_HERSHEY_SIMPLEX, 0.45,color, 2)
             cv.rectangle(frame,box,color,1)
             cv.putText(frame, label, (box[0], box[1]-10), 
                        cv.FONT_HERSHEY_SIMPLEX, 0.45,color, 2)
@@ -96,7 +94,7 @@ while True:
     if key == ord('q'):
         break
     
-print("Facemask Type Detector Closed")
+print("Safety Helmet Detector Closed")
 
 cap.release()
 cv.destroyAllWindows()
