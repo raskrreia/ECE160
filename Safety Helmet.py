@@ -9,7 +9,7 @@ receiver_id = 1810976786 # https://api.telegram.org/botTOKEN/getUpdates
 #   https://api.telegram.org/bot5319436243:AAEMiq5mdxECK1Yzixg3rdxGi4X_7MWP87Q/getUpdates
 
 #   Confidence Threshold & Non-Max Suppression Threshold
-Conf_threshold = 0.5
+Conf_threshold = 0.58
 NMS_threshold = 0.7
 
 COLORS = [(0,255,255),(0,0,255)]
@@ -23,7 +23,7 @@ COLORS = [(0,255,255),(0,0,255)]
 bot = telepot.Bot(token)
 bot.sendMessage(receiver_id, 'Safety Helmet Detection is now active') # send a activation message to telegram receiver id
 
-#   Class Names: No Mask, Surgical Mask, Fabric Mask, FFP Mask
+#   Class Names: No Helmet and With Helmet
 class_name = []
 with open('helmet.names','r') as f:
     class_name = [cname.strip() for cname in f.readlines()]
@@ -39,8 +39,8 @@ net.setPreferableTarget(cv.dnn.DNN_TARGET_CUDA_FP16)
 #   Detect Model
 model = cv.dnn_DetectionModel(net)
 #   Set Parameters
-model.setInputParams(size=(416,416), scale = 1/255, swapRB=True)
-media_source = 'helmesttt.mp4' #0 for main, 1 = secondary cam,... ('filename.mp4') for videos
+model.setInputParams(size=(820,820), scale = 1/255, swapRB=True)
+media_source = 'helmet_ouput.mp4' #0 for main, 1 = secondary cam,... ('filename.mp4') for videos
 
 #   Source Feed: Webcam
 cap = cv.VideoCapture(media_source)
@@ -68,7 +68,7 @@ while True:
                    cv.FONT_HERSHEY_SIMPLEX, 0.45,color, 2)
         
     
-#   Save picture with No mask
+#   Save picture with No Helmet
     
         if classid== 1:
             cv.rectangle(frame,box,color,1)

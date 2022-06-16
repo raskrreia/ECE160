@@ -1,8 +1,8 @@
 import cv2 as cv
 import numpy as np
 
-Conf_threshold = 0.4
-NMS_threshold = 0.4
+Conf_threshold = 0.58
+NMS_threshold = 0.7
 
 COLORS = [(0,255,255),(0,0,255)]
 
@@ -24,7 +24,7 @@ net.setPreferableBackend(cv.dnn.DNN_BACKEND_CUDA)
 net.setPreferableTarget(cv.dnn.DNN_TARGET_CUDA_FP16)
 
 model = cv.dnn_DetectionModel(net)
-model.setInputParams(size=(540,540), scale = 1/255, swapRB=True)
+model.setInputParams(size=(820,820), scale = 1/255, swapRB=True)
 
 cap = cv.VideoCapture('helmesttt.mp4')
 
