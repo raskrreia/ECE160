@@ -9,7 +9,7 @@ receiver_id = 1810976786 # https://api.telegram.org/botTOKEN/getUpdates
 #   https://api.telegram.org/bot5319436243:AAEMiq5mdxECK1Yzixg3rdxGi4X_7MWP87Q/getUpdates
 
 #   Confidence Threshold & Non-Max Suppression Threshold
-Conf_threshold = 0.58
+Conf_threshold = 0.67
 NMS_threshold = 0.7
 
 COLORS = [(0,255,255),(0,0,255)]
