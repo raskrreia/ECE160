@@ -40,7 +40,7 @@ net.setPreferableTarget(cv.dnn.DNN_TARGET_CUDA_FP16)
 model = cv.dnn_DetectionModel(net)
 #   Set Parameters
 model.setInputParams(size=(820,820), scale = 1/255, swapRB=True)
-media_source = 'helmet_ouput.mp4' #0 for main, 1 = secondary cam,... ('filename.mp4') for videos
+media_source = 'helmesttt.mp4' #0 for main, 1 = secondary cam,... ('filename.mp4') for videos
 
 #   Source Feed: Webcam
 cap = cv.VideoCapture(media_source)
